@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsMovtos" targetNamespace="http://tempuri.org/dtsMovtos.xsd" xmlns:mstns="http://tempuri.org/dtsMovtos.xsd" xmlns="http://tempuri.org/dtsMovtos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="FinanciaDinConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FinanciaDinConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.FinanciaDinConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReporteMOVTOSTableAdapter" GeneratorDataComponentClassName="ReporteMOVTOSTableAdapter" Name="ReporteMOVTOS" UserDataComponentName="ReporteMOVTOSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FinanciaDinConnectionString (Web.config)" DbObjectName="FINANCIADIN.dbo.ReporteMOVTOS" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Id_Mov, Id_Credito, PagosIncluidos, Sucursal, Cliente, Login, NombreLogin, FecPago, PagoTotal, Monto, Capital, Interes, IVA, Suma, Recargo, Moratorio, 
+                         IVAMoratorio, Asesor
+FROM            ReporteMOVTOS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id_Credito" DataSetColumn="Id_Credito" />
+              <Mapping SourceColumn="PagosIncluidos" DataSetColumn="PagosIncluidos" />
+              <Mapping SourceColumn="Sucursal" DataSetColumn="Sucursal" />
+              <Mapping SourceColumn="Cliente" DataSetColumn="Cliente" />
+              <Mapping SourceColumn="Login" DataSetColumn="Login" />
+              <Mapping SourceColumn="NombreLogin" DataSetColumn="NombreLogin" />
+              <Mapping SourceColumn="FecPago" DataSetColumn="FecPago" />
+              <Mapping SourceColumn="PagoTotal" DataSetColumn="PagoTotal" />
+              <Mapping SourceColumn="Monto" DataSetColumn="Monto" />
+              <Mapping SourceColumn="Capital" DataSetColumn="Capital" />
+              <Mapping SourceColumn="Interes" DataSetColumn="Interes" />
+              <Mapping SourceColumn="IVA" DataSetColumn="IVA" />
+              <Mapping SourceColumn="Suma" DataSetColumn="Suma" />
+              <Mapping SourceColumn="Recargo" DataSetColumn="Recargo" />
+              <Mapping SourceColumn="Moratorio" DataSetColumn="Moratorio" />
+              <Mapping SourceColumn="IVAMoratorio" DataSetColumn="IVAMoratorio" />
+              <Mapping SourceColumn="Id_Mov" DataSetColumn="Id_Mov" />
+              <Mapping SourceColumn="Asesor" DataSetColumn="Asesor" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsMovtos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsMovtos" msprop:Generator_UserDSName="dtsMovtos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReporteMOVTOS" msprop:Generator_TableClassName="ReporteMOVTOSDataTable" msprop:Generator_TableVarName="tableReporteMOVTOS" msprop:Generator_TablePropName="ReporteMOVTOS" msprop:Generator_RowDeletingName="ReporteMOVTOSRowDeleting" msprop:Generator_RowChangingName="ReporteMOVTOSRowChanging" msprop:Generator_RowEvHandlerName="ReporteMOVTOSRowChangeEventHandler" msprop:Generator_RowDeletedName="ReporteMOVTOSRowDeleted" msprop:Generator_UserTableName="ReporteMOVTOS" msprop:Generator_RowChangedName="ReporteMOVTOSRowChanged" msprop:Generator_RowEvArgName="ReporteMOVTOSRowChangeEvent" msprop:Generator_RowClassName="ReporteMOVTOSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_Mov" msprop:Generator_ColumnVarNameInTable="columnId_Mov" msprop:Generator_ColumnPropNameInRow="Id_Mov" msprop:Generator_ColumnPropNameInTable="Id_MovColumn" msprop:Generator_UserColumnName="Id_Mov" type="xs:int" />
+              <xs:element name="Id_Credito" msprop:Generator_ColumnVarNameInTable="columnId_Credito" msprop:Generator_ColumnPropNameInRow="Id_Credito" msprop:Generator_ColumnPropNameInTable="Id_CreditoColumn" msprop:Generator_UserColumnName="Id_Credito" type="xs:int" minOccurs="0" />
+              <xs:element name="PagosIncluidos" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPagosIncluidos" msprop:Generator_ColumnPropNameInRow="PagosIncluidos" msprop:Generator_ColumnPropNameInTable="PagosIncluidosColumn" msprop:Generator_UserColumnName="PagosIncluidos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sucursal" msprop:Generator_ColumnVarNameInTable="columnSucursal" msprop:Generator_ColumnPropNameInRow="Sucursal" msprop:Generator_ColumnPropNameInTable="SucursalColumn" msprop:Generator_UserColumnName="Sucursal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cliente" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCliente" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_UserColumnName="Cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="123" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Login" msprop:Generator_ColumnVarNameInTable="columnLogin" msprop:Generator_ColumnPropNameInRow="Login" msprop:Generator_ColumnPropNameInTable="LoginColumn" msprop:Generator_UserColumnName="Login" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NombreLogin" msprop:Generator_ColumnVarNameInTable="columnNombreLogin" msprop:Generator_ColumnPropNameInRow="NombreLogin" msprop:Generator_ColumnPropNameInTable="NombreLoginColumn" msprop:Generator_UserColumnName="NombreLogin" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FecPago" msprop:Generator_ColumnVarNameInTable="columnFecPago" msprop:Generator_ColumnPropNameInRow="FecPago" msprop:Generator_ColumnPropNameInTable="FecPagoColumn" msprop:Generator_UserColumnName="FecPago" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PagoTotal" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPagoTotal" msprop:Generator_ColumnPropNameInRow="PagoTotal" msprop:Generator_ColumnPropNameInTable="PagoTotalColumn" msprop:Generator_UserColumnName="PagoTotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Monto" msprop:Generator_ColumnVarNameInTable="columnMonto" msprop:Generator_ColumnPropNameInRow="Monto" msprop:Generator_ColumnPropNameInTable="MontoColumn" msprop:Generator_UserColumnName="Monto" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Capital" msprop:Generator_ColumnVarNameInTable="columnCapital" msprop:Generator_ColumnPropNameInRow="Capital" msprop:Generator_ColumnPropNameInTable="CapitalColumn" msprop:Generator_UserColumnName="Capital" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Interes" msprop:Generator_ColumnVarNameInTable="columnInteres" msprop:Generator_ColumnPropNameInRow="Interes" msprop:Generator_ColumnPropNameInTable="InteresColumn" msprop:Generator_UserColumnName="Interes" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IVA" msprop:Generator_ColumnVarNameInTable="columnIVA" msprop:Generator_ColumnPropNameInRow="IVA" msprop:Generator_ColumnPropNameInTable="IVAColumn" msprop:Generator_UserColumnName="IVA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Suma" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSuma" msprop:Generator_ColumnPropNameInRow="Suma" msprop:Generator_ColumnPropNameInTable="SumaColumn" msprop:Generator_UserColumnName="Suma" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Recargo" msprop:Generator_ColumnVarNameInTable="columnRecargo" msprop:Generator_ColumnPropNameInRow="Recargo" msprop:Generator_ColumnPropNameInTable="RecargoColumn" msprop:Generator_UserColumnName="Recargo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Moratorio" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMoratorio" msprop:Generator_ColumnPropNameInRow="Moratorio" msprop:Generator_ColumnPropNameInTable="MoratorioColumn" msprop:Generator_UserColumnName="Moratorio" type="xs:double" minOccurs="0" />
+              <xs:element name="IVAMoratorio" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIVAMoratorio" msprop:Generator_ColumnPropNameInRow="IVAMoratorio" msprop:Generator_ColumnPropNameInTable="IVAMoratorioColumn" msprop:Generator_UserColumnName="IVAMoratorio" type="xs:double" minOccurs="0" />
+              <xs:element name="Asesor" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAsesor" msprop:Generator_ColumnPropNameInRow="Asesor" msprop:Generator_ColumnPropNameInTable="AsesorColumn" msprop:Generator_UserColumnName="Asesor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

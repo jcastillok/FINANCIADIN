@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsCartera" targetNamespace="http://tempuri.org/dtsCartera.xsd" xmlns:mstns="http://tempuri.org/dtsCartera.xsd" xmlns="http://tempuri.org/dtsCartera.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="FinanciaDinConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FinanciaDinConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.FinanciaDinConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReporteCarteraTableAdapter" GeneratorDataComponentClassName="ReporteCarteraTableAdapter" Name="ReporteCartera" UserDataComponentName="ReporteCarteraTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FinanciaDinConnectionString (Web.config)" DbObjectName="FINANCIADIN.dbo.ReporteCartera" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Sucursal, Asesor, Nombre, Id_Cli, Folio, Capital, SaldoCapital, SaldoVencido, InteresPendiente, MoraGenerado, FechaUltimoPago, DiasDeAtraso, FechaInicio, FechaFinCredito, DiaDePago, CuotaDePago, PagosCubiertos, 
+                         PagosConAtraso, MoraGenerado + InteresPendiente + SaldoVencido AS MontoPendiente, MontoUltimoPago, FrecuenciaDePago
+FROM            ReporteCartera</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Sucursal" DataSetColumn="Sucursal" />
+              <Mapping SourceColumn="Asesor" DataSetColumn="Asesor" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Id_Cli" DataSetColumn="Id_Cli" />
+              <Mapping SourceColumn="NoCredito" DataSetColumn="NoCredito" />
+              <Mapping SourceColumn="Folio" DataSetColumn="Folio" />
+              <Mapping SourceColumn="Capital" DataSetColumn="Capital" />
+              <Mapping SourceColumn="SaldoCapital" DataSetColumn="SaldoCapital" />
+              <Mapping SourceColumn="SaldoVencido" DataSetColumn="SaldoVencido" />
+              <Mapping SourceColumn="InteresPendiente" DataSetColumn="InteresPendiente" />
+              <Mapping SourceColumn="MoraGenerado" DataSetColumn="MoraGenerado" />
+              <Mapping SourceColumn="FechaUltimoPago" DataSetColumn="FechaUltimoPago" />
+              <Mapping SourceColumn="DiasDeAtraso" DataSetColumn="DiasDeAtraso" />
+              <Mapping SourceColumn="FechaInicio" DataSetColumn="FechaInicio" />
+              <Mapping SourceColumn="FechaFinCredito" DataSetColumn="FechaFinCredito" />
+              <Mapping SourceColumn="DiaDePago" DataSetColumn="DiaDePago" />
+              <Mapping SourceColumn="CuotaDePago" DataSetColumn="CuotaDePago" />
+              <Mapping SourceColumn="PagosCubiertos" DataSetColumn="PagosCubiertos" />
+              <Mapping SourceColumn="PagosConAtraso" DataSetColumn="PagosConAtraso" />
+              <Mapping SourceColumn="MontoPendiente" DataSetColumn="MontoPendiente" />
+              <Mapping SourceColumn="MontoUltimoPago" DataSetColumn="MontoUltimoPago" />
+              <Mapping SourceColumn="FrecuenciaDePago" DataSetColumn="FrecuenciaDePago" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsCartera" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsCartera" msprop:Generator_UserDSName="dtsCartera">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReporteCartera" msprop:Generator_TableClassName="ReporteCarteraDataTable" msprop:Generator_TableVarName="tableReporteCartera" msprop:Generator_TablePropName="ReporteCartera" msprop:Generator_RowDeletingName="ReporteCarteraRowDeleting" msprop:Generator_RowChangingName="ReporteCarteraRowChanging" msprop:Generator_RowEvHandlerName="ReporteCarteraRowChangeEventHandler" msprop:Generator_RowDeletedName="ReporteCarteraRowDeleted" msprop:Generator_UserTableName="ReporteCartera" msprop:Generator_RowChangedName="ReporteCarteraRowChanged" msprop:Generator_RowEvArgName="ReporteCarteraRowChangeEvent" msprop:Generator_RowClassName="ReporteCarteraRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Sucursal" msprop:Generator_ColumnVarNameInTable="columnSucursal" msprop:Generator_ColumnPropNameInRow="Sucursal" msprop:Generator_ColumnPropNameInTable="SucursalColumn" msprop:Generator_UserColumnName="Sucursal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Asesor" msprop:Generator_ColumnVarNameInTable="columnAsesor" msprop:Generator_ColumnPropNameInRow="Asesor" msprop:Generator_ColumnPropNameInTable="AsesorColumn" msprop:Generator_UserColumnName="Asesor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id_Cli" msprop:Generator_ColumnVarNameInTable="columnId_Cli" msprop:Generator_ColumnPropNameInRow="Id_Cli" msprop:Generator_ColumnPropNameInTable="Id_CliColumn" msprop:Generator_UserColumnName="Id_Cli" type="xs:int" minOccurs="0" />
+              <xs:element name="NoCredito" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNoCredito" msprop:Generator_ColumnPropNameInRow="NoCredito" msprop:Generator_ColumnPropNameInTable="NoCreditoColumn" msprop:Generator_UserColumnName="NoCredito" type="xs:int" minOccurs="0" />
+              <xs:element name="Folio" msprop:Generator_ColumnVarNameInTable="columnFolio" msprop:Generator_ColumnPropNameInRow="Folio" msprop:Generator_ColumnPropNameInTable="FolioColumn" msprop:Generator_UserColumnName="Folio" type="xs:int" />
+              <xs:element name="Capital" msprop:Generator_ColumnVarNameInTable="columnCapital" msprop:Generator_ColumnPropNameInRow="Capital" msprop:Generator_ColumnPropNameInTable="CapitalColumn" msprop:Generator_UserColumnName="Capital" type="xs:decimal" />
+              <xs:element name="SaldoCapital" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSaldoCapital" msprop:Generator_ColumnPropNameInRow="SaldoCapital" msprop:Generator_ColumnPropNameInTable="SaldoCapitalColumn" msprop:Generator_UserColumnName="SaldoCapital" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SaldoVencido" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSaldoVencido" msprop:Generator_ColumnPropNameInRow="SaldoVencido" msprop:Generator_ColumnPropNameInTable="SaldoVencidoColumn" msprop:Generator_UserColumnName="SaldoVencido" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InteresPendiente" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnInteresPendiente" msprop:Generator_ColumnPropNameInRow="InteresPendiente" msprop:Generator_ColumnPropNameInTable="InteresPendienteColumn" msprop:Generator_UserColumnName="InteresPendiente" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MoraGenerado" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMoraGenerado" msprop:Generator_ColumnPropNameInRow="MoraGenerado" msprop:Generator_ColumnPropNameInTable="MoraGeneradoColumn" msprop:Generator_UserColumnName="MoraGenerado" type="xs:double" minOccurs="0" />
+              <xs:element name="FechaUltimoPago" msprop:Generator_ColumnVarNameInTable="columnFechaUltimoPago" msprop:Generator_ColumnPropNameInRow="FechaUltimoPago" msprop:Generator_ColumnPropNameInTable="FechaUltimoPagoColumn" msprop:Generator_UserColumnName="FechaUltimoPago" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DiasDeAtraso" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDiasDeAtraso" msprop:Generator_ColumnPropNameInRow="DiasDeAtraso" msprop:Generator_ColumnPropNameInTable="DiasDeAtrasoColumn" msprop:Generator_UserColumnName="DiasDeAtraso" type="xs:int" minOccurs="0" />
+              <xs:element name="FechaInicio" msprop:Generator_ColumnVarNameInTable="columnFechaInicio" msprop:Generator_ColumnPropNameInRow="FechaInicio" msprop:Generator_ColumnPropNameInTable="FechaInicioColumn" msprop:Generator_UserColumnName="FechaInicio" type="xs:dateTime" />
+              <xs:element name="FechaFinCredito" msprop:Generator_ColumnVarNameInTable="columnFechaFinCredito" msprop:Generator_ColumnPropNameInRow="FechaFinCredito" msprop:Generator_ColumnPropNameInTable="FechaFinCreditoColumn" msprop:Generator_UserColumnName="FechaFinCredito" type="xs:dateTime" />
+              <xs:element name="DiaDePago" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDiaDePago" msprop:Generator_ColumnPropNameInRow="DiaDePago" msprop:Generator_ColumnPropNameInTable="DiaDePagoColumn" msprop:Generator_UserColumnName="DiaDePago" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CuotaDePago" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCuotaDePago" msprop:Generator_ColumnPropNameInRow="CuotaDePago" msprop:Generator_ColumnPropNameInTable="CuotaDePagoColumn" msprop:Generator_UserColumnName="CuotaDePago" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PagosCubiertos" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPagosCubiertos" msprop:Generator_ColumnPropNameInRow="PagosCubiertos" msprop:Generator_ColumnPropNameInTable="PagosCubiertosColumn" msprop:Generator_UserColumnName="PagosCubiertos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PagosConAtraso" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPagosConAtraso" msprop:Generator_ColumnPropNameInRow="PagosConAtraso" msprop:Generator_ColumnPropNameInTable="PagosConAtrasoColumn" msprop:Generator_UserColumnName="PagosConAtraso" type="xs:int" minOccurs="0" />
+              <xs:element name="MontoPendiente" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMontoPendiente" msprop:Generator_ColumnPropNameInRow="MontoPendiente" msprop:Generator_ColumnPropNameInTable="MontoPendienteColumn" msprop:Generator_UserColumnName="MontoPendiente" type="xs:double" minOccurs="0" />
+              <xs:element name="MontoUltimoPago" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMontoUltimoPago" msprop:Generator_ColumnPropNameInRow="MontoUltimoPago" msprop:Generator_ColumnPropNameInTable="MontoUltimoPagoColumn" msprop:Generator_UserColumnName="MontoUltimoPago" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FrecuenciaDePago" msprop:Generator_ColumnVarNameInTable="columnFrecuenciaDePago" msprop:Generator_ColumnPropNameInRow="FrecuenciaDePago" msprop:Generator_ColumnPropNameInTable="FrecuenciaDePagoColumn" msprop:Generator_UserColumnName="FrecuenciaDePago" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ReporteCartera" />
+      <xs:field xpath="mstns:Folio" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

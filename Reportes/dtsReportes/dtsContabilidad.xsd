@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsContabilidad" targetNamespace="http://tempuri.org/dtsContabilidad.xsd" xmlns:mstns="http://tempuri.org/dtsContabilidad.xsd" xmlns="http://tempuri.org/dtsContabilidad.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="FinanciaDinConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FinanciaDinConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.FinanciaDinConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReporteContabilidadTableAdapter" GeneratorDataComponentClassName="ReporteContabilidadTableAdapter" Name="ReporteContabilidad" UserDataComponentName="ReporteContabilidadTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FinanciaDinConnectionString (Web.config)" DbObjectName="FINANCIADIN.dbo.ReporteContabilidad" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Folio, NoCredito, Cliente, MontoPrestado, InteresAPagar, IvaAPagar, TotalAPagar, Capital, Interes, IVA, Moratorio, IVAMoratorio, Recargo
+FROM            ReporteContabilidad</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Folio" DataSetColumn="Folio" />
+              <Mapping SourceColumn="Cliente" DataSetColumn="Cliente" />
+              <Mapping SourceColumn="MontoPrestado" DataSetColumn="MontoPrestado" />
+              <Mapping SourceColumn="InteresAPagar" DataSetColumn="InteresAPagar" />
+              <Mapping SourceColumn="IvaAPagar" DataSetColumn="IvaAPagar" />
+              <Mapping SourceColumn="TotalAPagar" DataSetColumn="TotalAPagar" />
+              <Mapping SourceColumn="Capital" DataSetColumn="Capital" />
+              <Mapping SourceColumn="Interes" DataSetColumn="Interes" />
+              <Mapping SourceColumn="IVA" DataSetColumn="IVA" />
+              <Mapping SourceColumn="Moratorio" DataSetColumn="Moratorio" />
+              <Mapping SourceColumn="IVAMoratorio" DataSetColumn="IVAMoratorio" />
+              <Mapping SourceColumn="Recargo" DataSetColumn="Recargo" />
+              <Mapping SourceColumn="NoCredito" DataSetColumn="NoCredito" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsContabilidad" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsContabilidad" msprop:Generator_UserDSName="dtsContabilidad">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReporteContabilidad" msprop:Generator_TableClassName="ReporteContabilidadDataTable" msprop:Generator_TableVarName="tableReporteContabilidad" msprop:Generator_RowChangedName="ReporteContabilidadRowChanged" msprop:Generator_TablePropName="ReporteContabilidad" msprop:Generator_RowDeletingName="ReporteContabilidadRowDeleting" msprop:Generator_RowChangingName="ReporteContabilidadRowChanging" msprop:Generator_RowEvHandlerName="ReporteContabilidadRowChangeEventHandler" msprop:Generator_RowDeletedName="ReporteContabilidadRowDeleted" msprop:Generator_RowClassName="ReporteContabilidadRow" msprop:Generator_UserTableName="ReporteContabilidad" msprop:Generator_RowEvArgName="ReporteContabilidadRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Folio" msprop:Generator_ColumnVarNameInTable="columnFolio" msprop:Generator_ColumnPropNameInRow="Folio" msprop:Generator_ColumnPropNameInTable="FolioColumn" msprop:Generator_UserColumnName="Folio" type="xs:int" />
+              <xs:element name="Cliente" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCliente" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_UserColumnName="Cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="123" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MontoPrestado" msprop:Generator_ColumnVarNameInTable="columnMontoPrestado" msprop:Generator_ColumnPropNameInRow="MontoPrestado" msprop:Generator_ColumnPropNameInTable="MontoPrestadoColumn" msprop:Generator_UserColumnName="MontoPrestado" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InteresAPagar" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnInteresAPagar" msprop:Generator_ColumnPropNameInRow="InteresAPagar" msprop:Generator_ColumnPropNameInTable="InteresAPagarColumn" msprop:Generator_UserColumnName="InteresAPagar" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IvaAPagar" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIvaAPagar" msprop:Generator_ColumnPropNameInRow="IvaAPagar" msprop:Generator_ColumnPropNameInTable="IvaAPagarColumn" msprop:Generator_UserColumnName="IvaAPagar" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalAPagar" msprop:Generator_ColumnVarNameInTable="columnTotalAPagar" msprop:Generator_ColumnPropNameInRow="TotalAPagar" msprop:Generator_ColumnPropNameInTable="TotalAPagarColumn" msprop:Generator_UserColumnName="TotalAPagar" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Capital" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCapital" msprop:Generator_ColumnPropNameInRow="Capital" msprop:Generator_ColumnPropNameInTable="CapitalColumn" msprop:Generator_UserColumnName="Capital" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Interes" msprop:Generator_ColumnVarNameInTable="columnInteres" msprop:Generator_ColumnPropNameInRow="Interes" msprop:Generator_ColumnPropNameInTable="InteresColumn" msprop:Generator_UserColumnName="Interes" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IVA" msprop:Generator_ColumnVarNameInTable="columnIVA" msprop:Generator_ColumnPropNameInRow="IVA" msprop:Generator_ColumnPropNameInTable="IVAColumn" msprop:Generator_UserColumnName="IVA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Moratorio" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMoratorio" msprop:Generator_ColumnPropNameInRow="Moratorio" msprop:Generator_ColumnPropNameInTable="MoratorioColumn" msprop:Generator_UserColumnName="Moratorio" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IVAMoratorio" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIVAMoratorio" msprop:Generator_ColumnPropNameInRow="IVAMoratorio" msprop:Generator_ColumnPropNameInTable="IVAMoratorioColumn" msprop:Generator_UserColumnName="IVAMoratorio" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Recargo" msprop:Generator_ColumnVarNameInTable="columnRecargo" msprop:Generator_ColumnPropNameInRow="Recargo" msprop:Generator_ColumnPropNameInTable="RecargoColumn" msprop:Generator_UserColumnName="Recargo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NoCredito" msprop:Generator_ColumnVarNameInTable="columnNoCredito" msprop:Generator_ColumnPropNameInRow="NoCredito" msprop:Generator_ColumnPropNameInTable="NoCreditoColumn" msprop:Generator_UserColumnName="NoCredito" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ReporteContabilidad" />
+      <xs:field xpath="mstns:Folio" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,230 @@
+﻿    <%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.Master.vb" Inherits="FinanciaDin.Site1" %>
+
+<%@ Register Assembly="DevExpress.Web.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Style/estilo.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+    <style type="text/css">
+        .centered
+        {
+            margin: 0 auto;
+            text-align: left;
+            width: 100%;
+        }
+        .centrado
+        {
+            margin: 0 auto;
+            top: 10%;
+            left: 50%;
+        }
+        .style2
+        {
+            font-family: Arial;
+            font-size: small;
+            vertical-align: center;
+            border-left-color: #A0A0A0;
+            border-right-color: #C0C0C0;
+            border-top-color: #A0A0A0;
+            border-bottom-color: #C0C0C0;
+            padding: 1px;
+        }
+        .style3
+        {
+            width: 207px;
+        }
+        .auto-style1 {
+            width: 208px;
+            height: 82px;
+        }
+
+        body { 
+            
+            background-color: #C0C9C9 } 
+
+    </style>
+     <script type="text/javascript" language="javascript" >
+         function MantenSesion() { 
+             var CONTROLADOR = "refresh_session.aspx"; 
+             var head = document.getElementsByTagName('head').item(0); 
+             script = document.createElement('script'); 
+             script.src = CONTROLADOR ; 
+             script.setAttribute('type', 'text/javascript'); 
+             script.defer = true; head.appendChild(script); 
+         } 
+         window.onload = function () {
+             var GetDocumentScrollTop = function () {
+                 var isScrollBodyIE = ASPx.Browser.IE && ASPx.GetCurrentStyle(document.body).overflow == "hidden" && document.body.scrollTop > 0;
+                 if (ASPx.Browser.WebKitFamily || isScrollBodyIE) {
+                     if (ASPx.Browser.MacOSMobilePlatform)
+                         return window.pageYOffset;
+                     else if (ASPx.Browser.WebKitFamily)
+                         return document.documentElement.scrollTop || document.body.scrollTop;
+                     return document.body.scrollTop;
+                 }
+                 else
+                     return document.documentElement.scrollTop;
+             };
+             var _aspxGetDocumentScrollTop = function () {
+                 if (__aspxWebKitFamily) {
+                     if (__aspxMacOSMobilePlatform)
+                         return window.pageYOffset;
+                     else
+                         return document.documentElement.scrollTop || document.body.scrollTop;
+                 }
+                 else
+                     return document.documentElement.scrollTop;
+             }
+             if (window._aspxGetDocumentScrollTop) {
+                 window._aspxGetDocumentScrollTop = _aspxGetDocumentScrollTop;
+                 window.ASPxClientUtils.GetDocumentScrollTop = _aspxGetDocumentScrollTop;
+             } else {
+                 window.ASPx.GetDocumentScrollTop = GetDocumentScrollTop;
+                 window.ASPxClientUtils.GetDocumentScrollTop = GetDocumentScrollTop;
+             }
+         };
+    </script>
+
+    <script type="text/javascript" src="../Scripts/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="../Scripts/core.js"></script>
+</head>
+<body onkeydown="javascript:if(window.event.keyCode == 13) window.event.keyCode = 9;" style="background:#ECF0F5"">
+    <form id="form1" runat="server">
+    <div class="page">
+        <div class="" style="background-color: #3C4456">
+            <div class="">
+                <table width="100%">
+                    <tr>
+                        <td valign="top" rowspan="2" class="style3">
+                            <img alt="" class="auto-style1" src="Images/din sa.png" dir="rtl" runat="server"/>
+                        </td>
+                        <td align="center" valign="top">
+                            <span class="title2" style="color: #FFFFFF">FinanciaDIN</span>
+                        </td>
+                        <td nowrap="nowrap" valign="top" class="blanco" style="text-align: right">
+                            <span class="blanco"><strong>Usuario:</strong></span>
+                            <asp:Label ID="LblNombre" runat="server" Font-Size="Small" CssClass="blanco"></asp:Label>
+                            <br />
+                            <strong>Sucursal:</strong>
+                            <asp:Label ID="LblSuc" runat="server" Font-Size="Small" CssClass="blanco"></asp:Label>
+                            <br />
+                            <strong>Acceso:</strong>
+                            <asp:Label ID="LblAcceso" runat="server" Font-Size="Small" CssClass="blanco"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="bottom">
+                            <dx:aspxmenu id="ASPxMenu1" runat="server" theme="Glass">
+                                <Items>
+                                    <dx:MenuItem Text="Prestamos">
+                                        <Items>
+                                            <dx:MenuItem Text="Captura de Solicitudes" NavigateUrl="~/Prestamos/CapturaSolicitudes.aspx">
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Confirmación" NavigateUrl="~/Prestamos/ConfirmacionSolicitudes.aspx">
+                                            </dx:MenuItem>
+                                           <%--  <dx:MenuItem NavigateUrl="~/Prestamos/AplicarLlaveCredito.aspx" Text="Asignar llave de Retiro">
+                                            </dx:MenuItem>--%>
+                                            <dx:MenuItem NavigateUrl="~/Prestamos/EntregaPrestamo.aspx" Text="Entrega de Prestamos">
+                                            </dx:MenuItem>
+                                            <dx:MenuItem NavigateUrl="~/Prestamos/Contratos.aspx" Text="Reimpresion de Contratos">
+                                            </dx:MenuItem>
+                                             <dx:MenuItem NavigateUrl="~/Prestamos/CapturaCreditoCarteraEmp.aspx" Text="Captura Creditos Empeños">
+                                            </dx:MenuItem>
+                                             <dx:MenuItem NavigateUrl="~/Prestamos/ConfirmCredCarteraemp.aspx" Text="Activar Créditos Empeños">
+                                            </dx:MenuItem>
+                                            
+                                        </Items>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="Pagos">
+                                        <Items>
+                                            <dx:MenuItem Text="Captura" NavigateUrl="~/Pagos/CapturaPagos.aspx">
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Detalle" NavigateUrl="~/Pagos/DetallePagos.aspx">
+                                            </dx:MenuItem>
+                                            <dx:MenuItem NavigateUrl="~/Pagos/CapturaPagosSuc.aspx" Text="Captura">
+                                            </dx:MenuItem>
+                                               <dx:MenuItem Text="Pagos Elite" NavigateUrl="~/Pagos/CapturaPagoEmp.aspx">
+                                            </dx:MenuItem>
+                                        </Items>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="Clientes">
+                                        <Items>
+                                            <dx:MenuItem Text="Captura" NavigateUrl="~/Clientes/AltaClientes.aspx">
+                                            </dx:MenuItem>
+                                            <dx:MenuItem NavigateUrl="~/Clientes/RastreoClientes.aspx" Text="Rastreo">
+                                            </dx:MenuItem>
+                                        </Items>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="Administrar">
+                                        <Items>
+                                            <dx:MenuItem Text="Usuarios" NavigateUrl="~/Administrar/AltaUsuarios.aspx">
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Catálogos" NavigateUrl="~/Administrar/Catalogos.aspx">
+                                            </dx:MenuItem>
+                                            <dx:MenuItem Text="Créditos" NavigateUrl="~/Administrar/ControlBajasCreditos.aspx">
+                                            </dx:MenuItem>
+                                        </Items>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="Reportes">
+                                        <Items>
+                                            <dx:MenuItem NavigateUrl="~/Reportes/GeneradorReportes.aspx" Text="Generador de Reportes">
+                                            </dx:MenuItem>
+                                              <dx:MenuItem NavigateUrl="~/Herramientas/CreditosCarteraVencida.aspx" Text="Cartera Vencida">
+                                            </dx:MenuItem>
+                                        </Items>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="Herramientas">
+                                        <Items>
+                                            <dx:MenuItem NavigateUrl="~/Herramientas/Cotizador.aspx" Text="Cotizador">
+                                            </dx:MenuItem>
+                                            <dx:MenuItem NavigateUrl="~/Herramientas/CondonacionesRemotas.aspx" Text="Condonaciones">
+                                            </dx:MenuItem>
+                                             
+                                        </Items>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="Configuración">
+                                        <Items>
+                                            <dx:MenuItem Text="Cuenta" NavigateUrl="~/Configuracion/Cuenta.aspx">
+                                            </dx:MenuItem>
+                                        </Items>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="Salir">
+                                    </dx:MenuItem>
+                                </Items>
+                            </dx:aspxmenu>
+                        </td>
+                        <td nowrap valign="top">
+                            &nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+            </div>
+        </div>
+        <div>
+            
+            <div class="col-lg-12 ">
+                        
+                               <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                          
+            </div>
+            
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsEntradasEsperadas" targetNamespace="http://tempuri.org/dtsEntradasEsperadas.xsd" xmlns:mstns="http://tempuri.org/dtsEntradasEsperadas.xsd" xmlns="http://tempuri.org/dtsEntradasEsperadas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="FinanciaDinConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FinanciaDinConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.FinanciaDinConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReporteEntradasEsperadasTableAdapter" GeneratorDataComponentClassName="ReporteEntradasEsperadasTableAdapter" Name="ReporteEntradasEsperadas" UserDataComponentName="ReporteEntradasEsperadasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FinanciaDinConnectionString (Web.config)" DbObjectName="FINANCIADIN.dbo.ReporteEntradasEsperadas" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Id_Credito, NumPago, FechaPago, Monto, Capital, Interes, IVA, Saldo, SaldoCapital, Asesor, Nombre, Liquidado, Login_Asesor, Sucursal, Id_Cliente
+FROM            ReporteEntradasEsperadas</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id_Credito" DataSetColumn="Id_Credito" />
+              <Mapping SourceColumn="NumPago" DataSetColumn="NumPago" />
+              <Mapping SourceColumn="FechaPago" DataSetColumn="FechaPago" />
+              <Mapping SourceColumn="Monto" DataSetColumn="Monto" />
+              <Mapping SourceColumn="Capital" DataSetColumn="Capital" />
+              <Mapping SourceColumn="Interes" DataSetColumn="Interes" />
+              <Mapping SourceColumn="IVA" DataSetColumn="IVA" />
+              <Mapping SourceColumn="Saldo" DataSetColumn="Saldo" />
+              <Mapping SourceColumn="SaldoCapital" DataSetColumn="SaldoCapital" />
+              <Mapping SourceColumn="Asesor" DataSetColumn="Asesor" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Liquidado" DataSetColumn="Liquidado" />
+              <Mapping SourceColumn="Login_Asesor" DataSetColumn="Login_Asesor" />
+              <Mapping SourceColumn="Sucursal" DataSetColumn="Sucursal" />
+              <Mapping SourceColumn="Id_Cliente" DataSetColumn="Id_Cliente" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsEntradasEsperadas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsEntradasEsperadas" msprop:Generator_UserDSName="dtsEntradasEsperadas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReporteEntradasEsperadas" msprop:Generator_TableClassName="ReporteEntradasEsperadasDataTable" msprop:Generator_TableVarName="tableReporteEntradasEsperadas" msprop:Generator_TablePropName="ReporteEntradasEsperadas" msprop:Generator_RowDeletingName="ReporteEntradasEsperadasRowDeleting" msprop:Generator_RowChangingName="ReporteEntradasEsperadasRowChanging" msprop:Generator_RowEvHandlerName="ReporteEntradasEsperadasRowChangeEventHandler" msprop:Generator_RowDeletedName="ReporteEntradasEsperadasRowDeleted" msprop:Generator_UserTableName="ReporteEntradasEsperadas" msprop:Generator_RowChangedName="ReporteEntradasEsperadasRowChanged" msprop:Generator_RowEvArgName="ReporteEntradasEsperadasRowChangeEvent" msprop:Generator_RowClassName="ReporteEntradasEsperadasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_Credito" msprop:Generator_ColumnVarNameInTable="columnId_Credito" msprop:Generator_ColumnPropNameInRow="Id_Credito" msprop:Generator_ColumnPropNameInTable="Id_CreditoColumn" msprop:Generator_UserColumnName="Id_Credito" type="xs:int" />
+              <xs:element name="NumPago" msprop:Generator_ColumnVarNameInTable="columnNumPago" msprop:Generator_ColumnPropNameInRow="NumPago" msprop:Generator_ColumnPropNameInTable="NumPagoColumn" msprop:Generator_UserColumnName="NumPago" type="xs:int" />
+              <xs:element name="FechaPago" msprop:Generator_ColumnVarNameInTable="columnFechaPago" msprop:Generator_ColumnPropNameInRow="FechaPago" msprop:Generator_ColumnPropNameInTable="FechaPagoColumn" msprop:Generator_UserColumnName="FechaPago" type="xs:dateTime" />
+              <xs:element name="Monto" msprop:Generator_ColumnVarNameInTable="columnMonto" msprop:Generator_ColumnPropNameInRow="Monto" msprop:Generator_ColumnPropNameInTable="MontoColumn" msprop:Generator_UserColumnName="Monto" type="xs:decimal" />
+              <xs:element name="Capital" msprop:Generator_ColumnVarNameInTable="columnCapital" msprop:Generator_ColumnPropNameInRow="Capital" msprop:Generator_ColumnPropNameInTable="CapitalColumn" msprop:Generator_UserColumnName="Capital" type="xs:decimal" />
+              <xs:element name="Interes" msprop:Generator_ColumnVarNameInTable="columnInteres" msprop:Generator_ColumnPropNameInRow="Interes" msprop:Generator_ColumnPropNameInTable="InteresColumn" msprop:Generator_UserColumnName="Interes" type="xs:decimal" />
+              <xs:element name="IVA" msprop:Generator_ColumnVarNameInTable="columnIVA" msprop:Generator_ColumnPropNameInRow="IVA" msprop:Generator_ColumnPropNameInTable="IVAColumn" msprop:Generator_UserColumnName="IVA" type="xs:decimal" />
+              <xs:element name="Saldo" msprop:Generator_ColumnVarNameInTable="columnSaldo" msprop:Generator_ColumnPropNameInRow="Saldo" msprop:Generator_ColumnPropNameInTable="SaldoColumn" msprop:Generator_UserColumnName="Saldo" type="xs:decimal" />
+              <xs:element name="SaldoCapital" msprop:Generator_ColumnVarNameInTable="columnSaldoCapital" msprop:Generator_ColumnPropNameInRow="SaldoCapital" msprop:Generator_ColumnPropNameInTable="SaldoCapitalColumn" msprop:Generator_UserColumnName="SaldoCapital" type="xs:decimal" />
+              <xs:element name="Asesor" msprop:Generator_ColumnVarNameInTable="columnAsesor" msprop:Generator_ColumnPropNameInRow="Asesor" msprop:Generator_ColumnPropNameInTable="AsesorColumn" msprop:Generator_UserColumnName="Asesor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Liquidado" msprop:Generator_ColumnVarNameInTable="columnLiquidado" msprop:Generator_ColumnPropNameInRow="Liquidado" msprop:Generator_ColumnPropNameInTable="LiquidadoColumn" msprop:Generator_UserColumnName="Liquidado" type="xs:boolean" />
+              <xs:element name="Login_Asesor" msprop:Generator_ColumnVarNameInTable="columnLogin_Asesor" msprop:Generator_ColumnPropNameInRow="Login_Asesor" msprop:Generator_ColumnPropNameInTable="Login_AsesorColumn" msprop:Generator_UserColumnName="Login_Asesor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sucursal" msprop:Generator_ColumnVarNameInTable="columnSucursal" msprop:Generator_ColumnPropNameInRow="Sucursal" msprop:Generator_ColumnPropNameInTable="SucursalColumn" msprop:Generator_UserColumnName="Sucursal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id_Cliente" msprop:Generator_ColumnVarNameInTable="columnId_Cliente" msprop:Generator_ColumnPropNameInRow="Id_Cliente" msprop:Generator_ColumnPropNameInTable="Id_ClienteColumn" msprop:Generator_UserColumnName="Id_Cliente" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ReporteEntradasEsperadas" />
+      <xs:field xpath="mstns:Id_Credito" />
+      <xs:field xpath="mstns:NumPago" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

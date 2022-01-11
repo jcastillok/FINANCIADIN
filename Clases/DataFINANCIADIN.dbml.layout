@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 19.75, 12.375" name="DataFINANCIADIN">
+  <DataContextMoniker Name="/DataFINANCIADINDataContext" />
+  <nestedChildShapes>
+    <classShape Id="540993f6-4299-4f16-a32a-80cac1357cf8" absoluteBounds="14.75, 4.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataFINANCIADINDataContext/CATPLAZOS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c20bbb5a-77d2-4484-8835-f8161c7c9250" absoluteBounds="14.765, 4.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7c894425-b36a-42a5-a057-343287739b5a" absoluteBounds="6.25, 5.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataFINANCIADINDataContext/CATTIPOCLIENTES" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b9c6a79b-87a7-47bb-a664-f0c5daddb082" absoluteBounds="6.265, 6.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f1a0d374-832a-49a6-9da0-1180e13e6b06" absoluteBounds="0.75, 8, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/DataFINANCIADINDataContext/CATSUCURSALES" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c79521ab-8893-42ff-b610-37f1d3f9f4e0" absoluteBounds="0.765, 8.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7f8eedbd-fbb7-46d6-866b-5a21904a56f1" absoluteBounds="6.25, 10, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataFINANCIADINDataContext/CATTIPOPAGOS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95e9d300-ea6d-468e-a2ba-85626289527d" absoluteBounds="6.265, 10.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="12010f59-fbcf-47e7-b4c6-a510b1869f15" absoluteBounds="6.25, 7.875, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/DataFINANCIADINDataContext/CATTIPOUSUARIOS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="54a93c42-20cc-4297-ae22-b2693b8a3857" absoluteBounds="6.265, 8.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="28606151-d3fd-4b56-9d5c-303df240e6ac" absoluteBounds="9, 4.625, 2, 6.1938297526041648">
+      <DataClassMoniker Name="/DataFINANCIADINDataContext/CLIENTES" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1247f410-8112-43b7-b853-cb083b190b47" absoluteBounds="9.015, 5.085, 1.9700000000000002, 5.6338297526041661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="32b76a57-33bc-49c1-92fb-ee045ffd9d8c" absoluteBounds="11.75, 5.75, 2, 3.8862125651041675">
+      <DataClassMoniker Name="/DataFINANCIADINDataContext/CREDITOS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c69076d-5bb4-441d-9cea-a2e73e1c82eb" absoluteBounds="11.765, 6.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="06a948fb-b845-424f-bf9c-1d22c2ab4705" absoluteBounds="14.5, 6.5, 2, 2.3478011067708326">
+      <DataClassMoniker Name="/DataFINANCIADINDataContext/PAGOS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="addf4e0a-3f96-4e17-bac4-7478e72a240f" absoluteBounds="14.515, 6.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="07edc438-5a29-4275-afd3-c32aa1edf203" absoluteBounds="17.5, 4.75, 2, 6.7707340494791666">
+      <DataClassMoniker Name="/DataFINANCIADINDataContext/SOLICITUDES" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1d57954-399d-4bc8-af50-9abd6c4e0c50" absoluteBounds="17.515, 5.21, 1.9700000000000002, 6.2107340494791661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2ef2057d-9f61-4a1d-8be7-4e1192903832" absoluteBounds="3.5, 7.75, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/DataFINANCIADINDataContext/USUARIOS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="45a7dda2-e617-4e8b-ace8-e951afeed757" absoluteBounds="3.515, 8.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 6.44314697265625); (9 : 6.44314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/CATTIPOCLIENTES/CATTIPOCLIENTES_CLIENTES" />
+      <nodes>
+        <classShapeMoniker Id="7c894425-b36a-42a5-a057-343287739b5a" />
+        <classShapeMoniker Id="28606151-d3fd-4b56-9d5c-303df240e6ac" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 7.69310628255208); (11.75 : 7.69310628255208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/CLIENTES/CLIENTES_CREDITOS" />
+      <nodes>
+        <classShapeMoniker Id="28606151-d3fd-4b56-9d5c-303df240e6ac" />
+        <classShapeMoniker Id="32b76a57-33bc-49c1-92fb-ee045ffd9d8c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 10.2587711588542); (12.6666666666667 : 10.2587711588542 : JumpStart); (12.8333333333333 : 10.2587711588542 : JumpEnd); (14.8854146666667 : 10.2587711588542 : JumpStart); (15.0520813333333 : 10.2587711588542 : JumpEnd); (15.5 : 10.2587711588542); (15.5 : 8.84780110677083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/CLIENTES/CLIENTES_PAGOS" />
+      <nodes>
+        <classShapeMoniker Id="28606151-d3fd-4b56-9d5c-303df240e6ac" />
+        <classShapeMoniker Id="06a948fb-b845-424f-bf9c-1d22c2ab4705" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.75 : 7.67390055338542); (14.5 : 7.67390055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/CREDITOS/CREDITOS_PAGOS" />
+      <nodes>
+        <classShapeMoniker Id="32b76a57-33bc-49c1-92fb-ee045ffd9d8c" />
+        <classShapeMoniker Id="06a948fb-b845-424f-bf9c-1d22c2ab4705" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.5 : 9.2732568359375); (15.5833333333333 : 9.2732568359375 : JumpStart); (15.4166666666667 : 9.2732568359375 : JumpEnd); (15.0520813333333 : 9.2732568359375 : JumpStart); (14.8854146666667 : 9.2732568359375 : JumpEnd); (13.75 : 9.2732568359375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/SOLICITUDES/SOLICITUDES_CREDITOS" />
+      <nodes>
+        <classShapeMoniker Id="07edc438-5a29-4275-afd3-c32aa1edf203" />
+        <classShapeMoniker Id="32b76a57-33bc-49c1-92fb-ee045ffd9d8c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.75 : 5.22199625651042); (17.5 : 5.22199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/CATPLAZOS/CATPLAZOS_SOLICITUDES" />
+      <nodes>
+        <classShapeMoniker Id="540993f6-4299-4f16-a32a-80cac1357cf8" />
+        <classShapeMoniker Id="07edc438-5a29-4275-afd3-c32aa1edf203" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.75 : 4.92349812825521); (17.5 : 4.92349812825521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/CATPLAZOS/CATPLAZOS_SOLICITUDES1" />
+      <nodes>
+        <classShapeMoniker Id="540993f6-4299-4f16-a32a-80cac1357cf8" />
+        <classShapeMoniker Id="07edc438-5a29-4275-afd3-c32aa1edf203" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 11.2010319010417); (17.5 : 11.2010319010417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/CATTIPOPAGOS/CATTIPOPAGOS_SOLICITUDES" />
+      <nodes>
+        <classShapeMoniker Id="7f8eedbd-fbb7-46d6-866b-5a21904a56f1" />
+        <classShapeMoniker Id="07edc438-5a29-4275-afd3-c32aa1edf203" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 9.91624186197917); (12.6666666666667 : 9.91624186197917 : JumpStart); (12.8333333333333 : 9.91624186197917 : JumpEnd); (14.8854146666667 : 9.91624186197917 : JumpStart); (15.0520813333333 : 9.91624186197917 : JumpEnd); (17.5 : 9.91624186197917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/CLIENTES/CLIENTES_SOLICITUDES" />
+      <nodes>
+        <classShapeMoniker Id="28606151-d3fd-4b56-9d5c-303df240e6ac" />
+        <classShapeMoniker Id="07edc438-5a29-4275-afd3-c32aa1edf203" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.75 : 6.09375); (17.5 : 6.09375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/CREDITOS/CREDITOS_SOLICITUDES" />
+      <nodes>
+        <classShapeMoniker Id="32b76a57-33bc-49c1-92fb-ee045ffd9d8c" />
+        <classShapeMoniker Id="07edc438-5a29-4275-afd3-c32aa1edf203" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 7.75); (4.5 : 6.44314697265625); (6.25 : 6.44314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/USUARIOS/USUARIOS_CATTIPOCLIENTES" />
+      <nodes>
+        <classShapeMoniker Id="2ef2057d-9f61-4a1d-8be7-4e1192903832" />
+        <classShapeMoniker Id="7c894425-b36a-42a5-a057-343287739b5a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 8.69314697265625); (2.75 : 8.69314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/USUARIOS/USUARIOS_CATSUCURSALES" />
+      <nodes>
+        <classShapeMoniker Id="2ef2057d-9f61-4a1d-8be7-4e1192903832" />
+        <classShapeMoniker Id="f1a0d374-832a-49a6-9da0-1180e13e6b06" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 9.7131982421875); (4.5 : 10.7892976888021); (6.25 : 10.7892976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/USUARIOS/USUARIOS_CATTIPOPAGOS" />
+      <nodes>
+        <classShapeMoniker Id="2ef2057d-9f61-4a1d-8be7-4e1192903832" />
+        <classShapeMoniker Id="7f8eedbd-fbb7-46d6-866b-5a21904a56f1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.56814697265625); (5.66666666666667 : 8.56814697265625 : JumpStart); (5.83333333333333 : 8.56814697265625 : JumpEnd); (6.25 : 8.56814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/USUARIOS/USUARIOS_CATTIPOUSUARIOS" />
+      <nodes>
+        <classShapeMoniker Id="2ef2057d-9f61-4a1d-8be7-4e1192903832" />
+        <classShapeMoniker Id="12010f59-fbcf-47e7-b4c6-a510b1869f15" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.51849609375); (5.91666666666667 : 9.51849609375 : JumpStart); (6.08333333333333 : 9.51849609375 : JumpEnd); (8.41666666666667 : 9.51849609375 : JumpStart); (8.58333333333333 : 9.51849609375 : JumpEnd); (9 : 9.51849609375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/USUARIOS/USUARIOS_CLIENTES" />
+      <nodes>
+        <classShapeMoniker Id="2ef2057d-9f61-4a1d-8be7-4e1192903832" />
+        <classShapeMoniker Id="28606151-d3fd-4b56-9d5c-303df240e6ac" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.04332153320312); (5.66666666666667 : 9.04332153320312 : JumpStart); (5.83333333333333 : 9.04332153320312 : JumpEnd); (6 : 9.04332153320312); (6 : 9.7612939453125); (8.41666666666667 : 9.7612939453125 : JumpStart); (8.58333333333333 : 9.7612939453125 : JumpEnd); (8.75 : 9.7612939453125); (8.75 : 11.0688297526042); (12.75 : 11.0688297526042); (12.75 : 9.63621256510417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/USUARIOS/USUARIOS_CREDITOS" />
+      <nodes>
+        <classShapeMoniker Id="2ef2057d-9f61-4a1d-8be7-4e1192903832" />
+        <classShapeMoniker Id="32b76a57-33bc-49c1-92fb-ee045ffd9d8c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.12782148632812); (5.75 : 8.12782148632812); (5.75 : 9.3862939453125); (8.5 : 9.3862939453125); (8.5 : 10.9438297526042); (14.968748 : 10.9438297526042); (14.968748 : 8.84780110677083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/USUARIOS/USUARIOS_PAGOS" />
+      <nodes>
+        <classShapeMoniker Id="2ef2057d-9f61-4a1d-8be7-4e1192903832" />
+        <classShapeMoniker Id="06a948fb-b845-424f-bf9c-1d22c2ab4705" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.67846373482572); (5.625 : 9.80346373482572); (5.625 : 11.7707340494792); (5.85416666666667 : 11.7707340494792 : JumpStart); (6.02083333333333 : 11.7707340494792 : JumpEnd); (17.2176923076923 : 11.7707340494792); (17.5 : 11.4884263571715)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/USUARIOS/USUARIOS_SOLICITUDES" />
+      <nodes>
+        <classShapeMoniker Id="2ef2057d-9f61-4a1d-8be7-4e1192903832" />
+        <classShapeMoniker Id="07edc438-5a29-4275-afd3-c32aa1edf203" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.6814840398137); (5.9375 : 10.1189840398137); (5.9375 : 11.8957340494792); (17.1603836153846 : 11.8957340494792); (17.5353836153846 : 11.5207340494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/USUARIOS/USUARIOS_SOLICITUDES1" />
+      <nodes>
+        <classShapeMoniker Id="2ef2057d-9f61-4a1d-8be7-4e1192903832" />
+        <classShapeMoniker Id="07edc438-5a29-4275-afd3-c32aa1edf203" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 8.28407348632813); (3.5 : 8.28407348632813)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/CATSUCURSALES/CATSUCURSALES_USUARIOS" />
+      <nodes>
+        <classShapeMoniker Id="f1a0d374-832a-49a6-9da0-1180e13e6b06" />
+        <classShapeMoniker Id="2ef2057d-9f61-4a1d-8be7-4e1192903832" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.25 : 8.80573425292969); (5.83333333333333 : 8.80573425292969 : JumpStart); (5.66666666666667 : 8.80573425292969 : JumpEnd); (5.5 : 8.80573425292969)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataFINANCIADINDataContext/CATTIPOUSUARIOS/CATTIPOUSUARIOS_USUARIOS" />
+      <nodes>
+        <classShapeMoniker Id="12010f59-fbcf-47e7-b4c6-a510b1869f15" />
+        <classShapeMoniker Id="2ef2057d-9f61-4a1d-8be7-4e1192903832" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

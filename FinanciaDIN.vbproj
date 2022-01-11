@@ -1,0 +1,1155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{E929F636-A15F-4728-AB3C-23618558918A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FinanciaDin</RootNamespace>
+    <AssemblyName>FinanciaDIN</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>FinanciaDIN.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>FinanciaDIN.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADODB, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>bin\ADODB.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AjaxControlToolkit, Version=18.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Administrador\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Data.AdoDotNetInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.SpellChecker.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxScheduler.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Web, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DotNetZip, Version=1.11.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetZip.1.11.0\lib\net20\DotNetZip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FinanciaDIN, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ASP.NET\FINANCIADIN\bin\FinanciaDIN.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.8\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Users\Deyvi Tziu\Documents\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ADODB" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Administrar\Catalogos.aspx" />
+    <Content Include="Administrar\AltaUsuarios.aspx" />
+    <Content Include="Administrar\ControlBajasCreditos.aspx" />
+    <Content Include="Bienvenida\Vendedor.aspx" />
+    <!--  <Content Include="bin\de\DevExpress.Data.v13.1.resources.dll" />-->
+    <Content Include="bin\de\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.ASPxScheduler.v13.1.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.ASPxScheduler.v15.2.resources.dll" />
+    <!--   <Content Include="bin\de\DevExpress.Web.v13.1.resources.dll" />
+    <Content Include="bin\es\DevExpress.Data.v13.1.resources.dll" />-->
+    <Content Include="bin\es\DevExpress.Data.v15.2.resources.dll" />
+    <!-- <Content Include="bin\es\DevExpress.Web.ASPxScheduler.v13.1.resources.dll" />-->
+    <Content Include="bin\es\DevExpress.Web.ASPxScheduler.v15.2.resources.dll" />
+    <!--    <Content Include="bin\es\DevExpress.Web.v13.1.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Data.v13.1.resources.dll" />-->
+    <Content Include="bin\ja\DevExpress.Data.v15.2.resources.dll" />
+    <!--   <Content Include="bin\ja\DevExpress.Web.ASPxScheduler.v13.1.resources.dll" />-->
+    <Content Include="bin\ja\DevExpress.Web.ASPxScheduler.v15.2.resources.dll" />
+    <!--   <Content Include="bin\ja\DevExpress.Web.v13.1.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Data.v13.1.resources.dll" />  -->
+    <Content Include="bin\ru\DevExpress.Data.v15.2.resources.dll" />
+    <!--    <Content Include="bin\ru\DevExpress.Web.ASPxScheduler.v13.1.resources.dll" />  -->
+    <Content Include="bin\ru\DevExpress.Web.ASPxScheduler.v15.2.resources.dll" />
+    <!--    <Content Include="bin\ru\DevExpress.Web.v13.1.resources.dll" /> -->
+    <Content Include="Clientes\AltaClientes.aspx" />
+    <Content Include="Clientes\RastreoClientes.aspx" />
+    <Content Include="Configuracion\Cuenta.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Bienvenida\Bienvenida.aspx" />
+    <Content Include="Bienvenida\General.aspx" />
+    <Content Include="Herramientas\CondonacionesRemotas.aspx" />
+    <Content Include="Herramientas\Cotizador.aspx" />
+    <Content Include="Herramientas\CreditosCarteraVencida.aspx" />
+    <Content Include="Images\add.ico" />
+    <Content Include="Images\add1.ico" />
+    <Content Include="Images\B.png" />
+    <Content Include="Images\candado.jpg" />
+    <Content Include="Images\din sa.png" />
+    <Content Include="Images\findin.jpeg" />
+    <Content Include="Images\fondo.jpg" />
+    <Content Include="Images\fondo2.jpg" />
+    <Content Include="Images\fondo_bk.jpg" />
+    <Content Include="Images\Imagen1.jpg" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\new_file.ico" />
+    <Content Include="Images\Stop 2.ico" />
+    <Content Include="Pagos\CapturaPagoEmp.aspx" />
+    <Content Include="Pagos\CapturaPagosSuc.aspx" />
+    <Content Include="Pagos\DetallePagos.aspx" />
+    <Content Include="Pagos\CapturaPagos.aspx" />
+    <Content Include="Pagos\dspVisor\dspTicketCompra.aspx" />
+    <Content Include="Prestamos\AplicarLlaveCredito.aspx" />
+    <Content Include="Prestamos\CapturaCreditoCarteraEmp.aspx" />
+    <Content Include="Prestamos\ConfirmacionSolicitudes.aspx" />
+    <Content Include="Prestamos\ConfirmCredCarteraemp.aspx" />
+    <Content Include="Prestamos\ControlGarantias.aspx" />
+    <Content Include="Prestamos\dspVisor\dspTablaAmort.aspx" />
+    <Content Include="Prestamos\dspVisor\dspContrato.aspx" />
+    <Content Include="Prestamos\dspVisor\dspEntregaDinero.aspx" />
+    <Content Include="Prestamos\dspVisor\dspTalon.aspx" />
+    <Content Include="Prestamos\dspVisor\dspPagare.aspx" />
+    <Content Include="Prestamos\EntregaPrestamo.aspx" />
+    <Content Include="Prestamos\Contratos.aspx" />
+    <Content Include="Prestamos\CapturaSolicitudes.aspx" />
+    <Content Include="refresh_session.aspx" />
+    <Content Include="Reportes\dspVisor\dspCarteraSL.aspx" />
+    <Content Include="Reportes\dspVisor\dspCreditosVencidos.aspx" />
+    <Content Include="Reportes\dspVisor\dspCreditos.aspx" />
+    <Content Include="Reportes\dspVisor\dspBases.aspx" />
+    <Content Include="Reportes\dspVisor\dspEntradasEsperadas.aspx" />
+    <Content Include="Reportes\dspVisor\dspMovtos.aspx" />
+    <Content Include="Reportes\dspVisor\dspDetallePagos.aspx" />
+    <Content Include="Reportes\dspVisor\dspContabilidad.aspx" />
+    <Content Include="Reportes\GeneradorReportes.aspx" />
+    <Content Include="Reportes\dspVisor\dspCartera.aspx" />
+    <Content Include="Scripts\adminlte.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\core.js" />
+    <Content Include="Scripts\demo.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Images\back.png" />
+    <Content Include="Reportes\dtsReportes\dtsCarteraVencida.xsc">
+      <DependentUpon>dtsCarteraVencida.xsd</DependentUpon>
+    </Content>
+    <None Include="Reportes\dtsReportes\dtsCarteraVencida.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsCarteraVencida.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Reportes\dtsReportes\dtsCarteraVencida.xss">
+      <DependentUpon>dtsCarteraVencida.xsd</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\sweetalert2.all.min.js" />
+    <Content Include="Style\estilo.css" />
+    <Content Include="Style\jquery-1.8.2.js" />
+    <Content Include="Style\jquery-ui.css" />
+    <Content Include="Style\jquery-ui.js" />
+    <Content Include="Style\layout.css" />
+    <Content Include="Style\Plantilla\AdminLTE.css" />
+    <Content Include="Style\Plantilla\bootstrap.css" />
+    <Content Include="Style\Plantilla\bootstrap.min.css" />
+    <Content Include="Style\Plantilla\font-awesome.min.css" />
+    <Content Include="Style\Plantilla\font-awesome\css\font-awesome.css" />
+    <Content Include="Style\Plantilla\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Style\Plantilla\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Style\Plantilla\ionicons.css" />
+    <Content Include="Style\Plantilla\_all-skins.css" />
+    <Content Include="Visor.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrar\Catalogos.aspx.designer.vb">
+      <DependentUpon>Catalogos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrar\Catalogos.aspx.vb">
+      <DependentUpon>Catalogos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrar\AltaUsuarios.aspx.designer.vb">
+      <DependentUpon>AltaUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrar\AltaUsuarios.aspx.vb">
+      <DependentUpon>AltaUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrar\ControlBajasCreditos.aspx.designer.vb">
+      <DependentUpon>ControlBajasCreditos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrar\ControlBajasCreditos.aspx.vb">
+      <DependentUpon>ControlBajasCreditos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Bienvenida\Vendedor.aspx.designer.vb">
+      <DependentUpon>Vendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bienvenida\Vendedor.aspx.vb">
+      <DependentUpon>Vendedor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Clases\ClienteGarantiaModelView.vb" />
+    <Compile Include="Clases\clsCliente.vb" />
+    <Compile Include="Clases\clsCondonacionRemota.vb" />
+    <Compile Include="Clases\clsCreditoViewModel.vb" />
+    <Compile Include="Clases\clsGarantia.vb" />
+    <Compile Include="Clases\clsLlaveCredito.vb" />
+    <Compile Include="Clases\clsRazonSocial.vb" />
+    <Compile Include="Clases\clsRefPersonales.vb" />
+    <Compile Include="Clases\clsInfoEconomica.vb" />
+    <Compile Include="Clases\clsNegocio.vb" />
+    <Compile Include="Clases\clsEmpresa.vb" />
+    <Compile Include="Clases\clsMovto.vb" />
+    <Compile Include="Clases\clsPago.vb" />
+    <Compile Include="Clases\clsDiaInhabil.vb" />
+    <Compile Include="Clases\clsCredito.vb" />
+    <Compile Include="Clases\clsReporteCarteraVencida.vb" />
+    <Compile Include="Clases\clsSolicitud.vb" />
+    <Compile Include="Clases\clsVistas.vb" />
+    <Compile Include="Clases\clsConexion.vb" />
+    <Compile Include="Clases\clsUsuario.vb" />
+    <Compile Include="Clases\clsUtileriasFecha.vb" />
+    <Compile Include="Clases\DataFINANCIADIN.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataFINANCIADIN.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\mensajeTransaccion.vb" />
+    <Compile Include="Clases\PrintHelper.vb" />
+    <Compile Include="Clases\Utilerias.vb" />
+    <Compile Include="Clientes\AltaClientes.aspx.designer.vb">
+      <DependentUpon>AltaClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\AltaClientes.aspx.vb">
+      <DependentUpon>AltaClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clientes\RastreoClientes.aspx.designer.vb">
+      <DependentUpon>RastreoClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\RastreoClientes.aspx.vb">
+      <DependentUpon>RastreoClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuracion\Cuenta.aspx.designer.vb">
+      <DependentUpon>Cuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\Cuenta.aspx.vb">
+      <DependentUpon>Cuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Bienvenida\Bienvenida.aspx.designer.vb">
+      <DependentUpon>Bienvenida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bienvenida\Bienvenida.aspx.vb">
+      <DependentUpon>Bienvenida.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Bienvenida\General.aspx.designer.vb">
+      <DependentUpon>General.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bienvenida\General.aspx.vb">
+      <DependentUpon>General.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Herramientas\CondonacionesRemotas.aspx.designer.vb">
+      <DependentUpon>CondonacionesRemotas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Herramientas\CondonacionesRemotas.aspx.vb">
+      <DependentUpon>CondonacionesRemotas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Herramientas\Cotizador.aspx.designer.vb">
+      <DependentUpon>Cotizador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Herramientas\Cotizador.aspx.vb">
+      <DependentUpon>Cotizador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Herramientas\CreditosCarteraVencida.aspx.designer.vb">
+      <DependentUpon>CreditosCarteraVencida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Herramientas\CreditosCarteraVencida.aspx.vb">
+      <DependentUpon>CreditosCarteraVencida.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Pagos\CapturaPagoEmp.aspx.designer.vb">
+      <DependentUpon>CapturaPagoEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos\CapturaPagoEmp.aspx.vb">
+      <DependentUpon>CapturaPagoEmp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pagos\CapturaPagosSuc.aspx.designer.vb">
+      <DependentUpon>CapturaPagosSuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos\CapturaPagosSuc.aspx.vb">
+      <DependentUpon>CapturaPagosSuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagos\crDocumentos\crTicketCompra.vb">
+      <DependentUpon>crTicketCompra.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Pagos\DetallePagos.aspx.designer.vb">
+      <DependentUpon>DetallePagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos\DetallePagos.aspx.vb">
+      <DependentUpon>DetallePagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagos\CapturaPagos.aspx.designer.vb">
+      <DependentUpon>CapturaPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos\CapturaPagos.aspx.vb">
+      <DependentUpon>CapturaPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagos\dspVisor\dspTicketCompra.aspx.designer.vb">
+      <DependentUpon>dspTicketCompra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos\dspVisor\dspTicketCompra.aspx.vb">
+      <DependentUpon>dspTicketCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos\AplicarLlaveCredito.aspx.designer.vb">
+      <DependentUpon>AplicarLlaveCredito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\AplicarLlaveCredito.aspx.vb">
+      <DependentUpon>AplicarLlaveCredito.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos\CapturaCreditoCarteraEmp.aspx.designer.vb">
+      <DependentUpon>CapturaCreditoCarteraEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\CapturaCreditoCarteraEmp.aspx.vb">
+      <DependentUpon>CapturaCreditoCarteraEmp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos\ConfirmacionSolicitudes.aspx.designer.vb">
+      <DependentUpon>ConfirmacionSolicitudes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\ConfirmacionSolicitudes.aspx.vb">
+      <DependentUpon>ConfirmacionSolicitudes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos\ConfirmCredCarteraemp.aspx.designer.vb">
+      <DependentUpon>ConfirmCredCarteraemp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\ConfirmCredCarteraemp.aspx.vb">
+      <DependentUpon>ConfirmCredCarteraemp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos\ControlGarantias.aspx.designer.vb">
+      <DependentUpon>ControlGarantias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\ControlGarantias.aspx.vb">
+      <DependentUpon>ControlGarantias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos\crDocumentos\crContratoNuevo.vb">
+      <DependentUpon>crContratoNuevo.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prestamos\crDocumentos\crPagareCredEmp.vb">
+      <DependentUpon>crPagareCredEmp.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Prestamos\crDocumentos\crPagare.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crPagare.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prestamos\crDocumentos\crContrato.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crContrato.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prestamos\crDocumentos\crEntregaDinero.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crEntregaDinero.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prestamos\crDocumentos\crSolicitud.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crSolicitud.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Prestamos\crDocumentos\crSolicitudAval.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crSolicitudAval.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Prestamos\crDocumentos\crTablaAmort.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crTablaAmort.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prestamos\crDocumentos\crTalon.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crTalon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prestamos\dspVisor\dspTablaAmort.aspx.designer.vb">
+      <DependentUpon>dspTablaAmort.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\dspVisor\dspTablaAmort.aspx.vb">
+      <DependentUpon>dspTablaAmort.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos\dspVisor\dspContrato.aspx.designer.vb">
+      <DependentUpon>dspContrato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\dspVisor\dspContrato.aspx.vb">
+      <DependentUpon>dspContrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos\dspVisor\dspEntregaDinero.aspx.designer.vb">
+      <DependentUpon>dspEntregaDinero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\dspVisor\dspEntregaDinero.aspx.vb">
+      <DependentUpon>dspEntregaDinero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos\dspVisor\dspTalon.aspx.designer.vb">
+      <DependentUpon>dspTalon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\dspVisor\dspTalon.aspx.vb">
+      <DependentUpon>dspTalon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos\dspVisor\dspPagare.aspx.designer.vb">
+      <DependentUpon>dspPagare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\dspVisor\dspPagare.aspx.vb">
+      <DependentUpon>dspPagare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos\dtsReportes\dtsPagare.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsPagare.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\dtsReportes\dtsSolicitudCliente.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsSolicitudCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\dtsReportes\dtsTablaAmort.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsTablaAmort.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\dtsReportes\dtsTalon.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsTalon.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\EntregaPrestamo.aspx.designer.vb">
+      <DependentUpon>EntregaPrestamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\EntregaPrestamo.aspx.vb">
+      <DependentUpon>EntregaPrestamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos\Contratos.aspx.designer.vb">
+      <DependentUpon>Contratos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\Contratos.aspx.vb">
+      <DependentUpon>Contratos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos\CapturaSolicitudes.aspx.designer.vb">
+      <DependentUpon>CapturaSolicitudes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\CapturaSolicitudes.aspx.vb">
+      <DependentUpon>CapturaSolicitudes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="refresh_session.aspx.designer.vb">
+      <DependentUpon>refresh_session.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="refresh_session.aspx.vb">
+      <DependentUpon>refresh_session.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\crDocumentos\crBases.vb">
+      <DependentUpon>crBases.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\crDocumentos\crCarteraSL.vb">
+      <DependentUpon>crCarteraSL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\crDocumentos\crCarteraVencida.vb">
+      <DependentUpon>crCarteraVencida.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\crDocumentos\crEntradasEsperadas.vb">
+      <DependentUpon>crEntradasEsperadas.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\crDocumentos\crContabilidad.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crContabilidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\crDocumentos\crCreditos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCreditos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\crDocumentos\crMovtos.vb">
+      <DependentUpon>crMovtos.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\crDocumentos\crDetallePagos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crDetallePagos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\crDocumentos\CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspCarteraSL.aspx.designer.vb">
+      <DependentUpon>dspCarteraSL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspCarteraSL.aspx.vb">
+      <DependentUpon>dspCarteraSL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspCreditosVencidos.aspx.designer.vb">
+      <DependentUpon>dspCreditosVencidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspCreditosVencidos.aspx.vb">
+      <DependentUpon>dspCreditosVencidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspCreditos.aspx.designer.vb">
+      <DependentUpon>dspCreditos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspCreditos.aspx.vb">
+      <DependentUpon>dspCreditos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspBases.aspx.designer.vb">
+      <DependentUpon>dspBases.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspBases.aspx.vb">
+      <DependentUpon>dspBases.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspEntradasEsperadas.aspx.designer.vb">
+      <DependentUpon>dspEntradasEsperadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspEntradasEsperadas.aspx.vb">
+      <DependentUpon>dspEntradasEsperadas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspMovtos.aspx.designer.vb">
+      <DependentUpon>dspMovtos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspMovtos.aspx.vb">
+      <DependentUpon>dspMovtos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspDetallePagos.aspx.designer.vb">
+      <DependentUpon>dspDetallePagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspDetallePagos.aspx.vb">
+      <DependentUpon>dspDetallePagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspContabilidad.aspx.designer.vb">
+      <DependentUpon>dspContabilidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspContabilidad.aspx.vb">
+      <DependentUpon>dspContabilidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\dtsReportes\dtsBases.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsBases.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dtsReportes\dtsCarteraSL.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsCarteraSL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dtsReportes\dtsCarteraVencida.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsCarteraVencida.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dtsReportes\dtsContabilidad.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsContabilidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dtsReportes\dtsCreditos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsCreditos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dtsReportes\dtsDetallePagos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsDetallePagos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dtsReportes\dtsDetallePagos.vb">
+      <DependentUpon>dtsDetallePagos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dtsReportes\dtsEntradasEsperadas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsEntradasEsperadas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dtsReportes\dtsMovtos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsMovtos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\GeneradorReportes.aspx.designer.vb">
+      <DependentUpon>GeneradorReportes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\GeneradorReportes.aspx.vb">
+      <DependentUpon>GeneradorReportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\crDocumentos\crCartera.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCartera.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspCartera.aspx.designer.vb">
+      <DependentUpon>dspCartera.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dspVisor\dspCartera.aspx.vb">
+      <DependentUpon>dspCartera.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\dtsReportes\dtsCartera.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsCartera.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visor.aspx.designer.vb">
+      <DependentUpon>Visor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visor.aspx.vb">
+      <DependentUpon>Visor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pagos\crDocumentos\crTicketCompra.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTicketCompra.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prestamos\crDocumentos\crContratoNuevo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crContratoNuevo.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prestamos\crDocumentos\crPagareCredEmp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crPagareCredEmp.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prestamos\crDocumentos\crPagare.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crPagare.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prestamos\crDocumentos\crContrato.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crContrato.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prestamos\crDocumentos\crEntregaDinero.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crEntregaDinero.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prestamos\crDocumentos\crSolicitud.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crSolicitud.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prestamos\crDocumentos\crSolicitudAval.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crSolicitudAval.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prestamos\crDocumentos\crTablaAmort.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTablaAmort.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prestamos\crDocumentos\crTalon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTalon.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crDocumentos\crBases.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBases.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crDocumentos\crCarteraSL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCarteraSL.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crDocumentos\crCarteraVencida.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCarteraVencida.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crDocumentos\crEntradasEsperadas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crEntradasEsperadas.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crDocumentos\crCartera.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCartera.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crDocumentos\crContabilidad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crContabilidad.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crDocumentos\crCreditos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCreditos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crDocumentos\crMovtos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crMovtos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crDocumentos\crDetallePagos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crDetallePagos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\crDocumentos\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Clases\DataFINANCIADIN.dbml.layout">
+      <DependentUpon>DataFINANCIADIN.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="packages.config" />
+    <Content Include="Clases\DataFINANCIADIN.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataFINANCIADIN.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ClassDiagram1.cd" />
+    <None Include="My Project\PublishProfiles\financiadin-perfil.pubxml" />
+    <None Include="My Project\PublishProfiles\FINANCIADIN.pubxml" />
+    <None Include="My Project\PublishProfiles\sicaviweb-perfil.pubxml" />
+    <Content Include="Prestamos\dtsReportes\dtsPagare.xsc">
+      <DependentUpon>dtsPagare.xsd</DependentUpon>
+    </Content>
+    <None Include="Prestamos\dtsReportes\dtsPagare.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsPagare.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Prestamos\dtsReportes\dtsPagare.xss">
+      <DependentUpon>dtsPagare.xsd</DependentUpon>
+    </Content>
+    <Content Include="Prestamos\dtsReportes\dtsTablaAmort.xsc">
+      <DependentUpon>dtsTablaAmort.xsd</DependentUpon>
+    </Content>
+    <Content Include="Prestamos\dtsReportes\dtsSolicitudCliente.xsc">
+      <DependentUpon>dtsSolicitudCliente.xsd</DependentUpon>
+    </Content>
+    <None Include="Prestamos\dtsReportes\dtsSolicitudCliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsSolicitudCliente.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Prestamos\dtsReportes\dtsSolicitudCliente.xss">
+      <DependentUpon>dtsSolicitudCliente.xsd</DependentUpon>
+    </Content>
+    <None Include="Prestamos\dtsReportes\dtsTablaAmort.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsTablaAmort.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Prestamos\dtsReportes\dtsTablaAmort.xss">
+      <DependentUpon>dtsTablaAmort.xsd</DependentUpon>
+    </Content>
+    <Content Include="Reportes\dtsReportes\dtsCartera.xsc">
+      <DependentUpon>dtsCartera.xsd</DependentUpon>
+    </Content>
+    <Content Include="Prestamos\dtsReportes\dtsTalon.xsc">
+      <DependentUpon>dtsTalon.xsd</DependentUpon>
+    </Content>
+    <None Include="Prestamos\dtsReportes\dtsTalon.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsTalon.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Prestamos\dtsReportes\dtsTalon.xss">
+      <DependentUpon>dtsTalon.xsd</DependentUpon>
+    </Content>
+    <Content Include="Reportes\dtsReportes\dtsBases.xsc">
+      <DependentUpon>dtsBases.xsd</DependentUpon>
+    </Content>
+    <None Include="Reportes\dtsReportes\dtsBases.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsBases.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Reportes\dtsReportes\dtsBases.xss">
+      <DependentUpon>dtsBases.xsd</DependentUpon>
+    </Content>
+    <None Include="Reportes\dtsReportes\dtsCartera.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsCartera.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Reportes\dtsReportes\dtsCartera.xss">
+      <DependentUpon>dtsCartera.xsd</DependentUpon>
+    </Content>
+    <Content Include="Reportes\dtsReportes\dtsContabilidad.xsc">
+      <DependentUpon>dtsContabilidad.xsd</DependentUpon>
+    </Content>
+    <Content Include="Reportes\dtsReportes\dtsCarteraSL.xsc">
+      <DependentUpon>dtsCarteraSL.xsd</DependentUpon>
+    </Content>
+    <None Include="Reportes\dtsReportes\dtsCarteraSL.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsCarteraSL.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Reportes\dtsReportes\dtsCarteraSL.xss">
+      <DependentUpon>dtsCarteraSL.xsd</DependentUpon>
+    </Content>
+    <None Include="Reportes\dtsReportes\dtsContabilidad.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsContabilidad.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Reportes\dtsReportes\dtsContabilidad.xss">
+      <DependentUpon>dtsContabilidad.xsd</DependentUpon>
+    </Content>
+    <Content Include="Reportes\dtsReportes\dtsDetallePagos.xsc">
+      <DependentUpon>dtsDetallePagos.xsd</DependentUpon>
+    </Content>
+    <Content Include="Reportes\dtsReportes\dtsCreditos.xsc">
+      <DependentUpon>dtsCreditos.xsd</DependentUpon>
+    </Content>
+    <None Include="Reportes\dtsReportes\dtsCreditos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsCreditos.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Reportes\dtsReportes\dtsCreditos.xss">
+      <DependentUpon>dtsCreditos.xsd</DependentUpon>
+    </Content>
+    <None Include="Reportes\dtsReportes\dtsDetallePagos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsDetallePagos.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Reportes\dtsReportes\dtsDetallePagos.xss">
+      <DependentUpon>dtsDetallePagos.xsd</DependentUpon>
+    </Content>
+    <Content Include="Reportes\dtsReportes\dtsMovtos.xsc">
+      <DependentUpon>dtsMovtos.xsd</DependentUpon>
+    </Content>
+    <Content Include="Reportes\dtsReportes\dtsEntradasEsperadas.xsc">
+      <DependentUpon>dtsEntradasEsperadas.xsd</DependentUpon>
+    </Content>
+    <None Include="Reportes\dtsReportes\dtsEntradasEsperadas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsEntradasEsperadas.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Reportes\dtsReportes\dtsEntradasEsperadas.xss">
+      <DependentUpon>dtsEntradasEsperadas.xsd</DependentUpon>
+    </Content>
+    <None Include="Reportes\dtsReportes\dtsMovtos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsMovtos.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Reportes\dtsReportes\dtsMovtos.xss">
+      <DependentUpon>dtsMovtos.xsd</DependentUpon>
+    </Content>
+    <Content Include="Style\Plantilla\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Style\Plantilla\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Style\Plantilla\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Style\Plantilla\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Style\Plantilla\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Style\Plantilla\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Themes\FinanciaDIN\" />
+    <Folder Include="aspnet_client\" />
+    <Folder Include="TempFile\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51720</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

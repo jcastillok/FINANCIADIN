@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FINANCIADIN" Class="DataFINANCIADINDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=10.10.200.104;Initial Catalog=FINANCIADIN;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="FinanciaDinConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CATPLAZOS" Member="CATPLAZOS">
+    <Type Name="CATPLAZOS">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="CATPLAZOS_SOLICITUDES" Member="SOLICITUDES" ThisKey="Id" OtherKey="PlazoAut" Type="SOLICITUDES" />
+      <Association Name="CATPLAZOS_SOLICITUDES1" Member="SOLICITUDES1" ThisKey="Id" OtherKey="PlazoSol" Type="SOLICITUDES" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CATTIPOCLIENTES" Member="CATTIPOCLIENTES">
+    <Type Name="CATTIPOCLIENTES">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Login" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="CATTIPOCLIENTES_CLIENTES" Member="CLIENTES" ThisKey="Id" OtherKey="Tipo" Type="CLIENTES" />
+      <Association Name="USUARIOS_CATTIPOCLIENTES" Member="USUARIOS" ThisKey="Login" OtherKey="Login" Type="USUARIOS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CATSUCURSALES" Member="CATSUCURSALES">
+    <Type Name="CATSUCURSALES">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Login" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="CATSUCURSALES_USUARIOS" Member="USUARIOS1" ThisKey="Id" OtherKey="Sucursal" Type="USUARIOS" />
+      <Association Name="USUARIOS_CATSUCURSALES" Member="USUARIOS" ThisKey="Login" OtherKey="Login" Type="USUARIOS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CATTIPOPAGOS" Member="CATTIPOPAGOS">
+    <Type Name="CATTIPOPAGOS">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Login" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="CATTIPOPAGOS_SOLICITUDES" Member="SOLICITUDES" ThisKey="Id" OtherKey="TipoPago" Type="SOLICITUDES" />
+      <Association Name="USUARIOS_CATTIPOPAGOS" Member="USUARIOS" ThisKey="Login" OtherKey="Login" Type="USUARIOS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CATTIPOUSUARIOS" Member="CATTIPOUSUARIOS">
+    <Type Name="CATTIPOUSUARIOS">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Login" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="CATTIPOUSUARIOS_USUARIOS" Member="USUARIOS1" ThisKey="id" OtherKey="Tipo" Type="USUARIOS" />
+      <Association Name="USUARIOS_CATTIPOUSUARIOS" Member="USUARIOS" ThisKey="Login" OtherKey="Login" Type="USUARIOS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CLIENTES" Member="CLIENTES">
+    <Type Name="CLIENTES">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PrimNombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SegNombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PrimApellido" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SegApellido" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Login" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RFC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CURP" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Calle" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NumExt" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="NumInt" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Colonia" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Localidad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Referencia" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Pais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Municipio" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CodPostal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FecNac" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="EMail" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Estatus" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FecRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Celular" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="NomAval" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DirAval" Type="System.String" DbType="VarChar(140) NOT NULL" CanBeNull="false" />
+      <Column Name="TelAval" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Association Name="CLIENTES_CREDITOS" Member="CREDITOS" ThisKey="Id" OtherKey="Id_Cliente" Type="CREDITOS" />
+      <Association Name="CLIENTES_PAGOS" Member="PAGOS" ThisKey="Id" OtherKey="Id_Cliente" Type="PAGOS" />
+      <Association Name="CLIENTES_SOLICITUDES" Member="SOLICITUDES" ThisKey="Id" OtherKey="Id_Cliente" Type="SOLICITUDES" />
+      <Association Name="CATTIPOCLIENTES_CLIENTES" Member="CATTIPOCLIENTES" ThisKey="Tipo" OtherKey="Id" Type="CATTIPOCLIENTES" IsForeignKey="true" />
+      <Association Name="USUARIOS_CLIENTES" Member="USUARIOS" ThisKey="Login" OtherKey="Login" Type="USUARIOS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CREDITOS" Member="CREDITOS">
+    <Type Name="CREDITOS">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_Sol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FecInicio" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FecFin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FecPrimPago" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Monto" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Plazo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumPagos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TasaRef" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="TipoAmort" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Sobretasa" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="TasaMoratoria" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Impuesto" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Pago" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Login" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="CREDITOS_PAGOS" Member="PAGOS" ThisKey="Id" OtherKey="Id_Credito" Type="PAGOS" />
+      <Association Name="CREDITOS_SOLICITUDES" Member="SOLICITUDES1" ThisKey="Id" OtherKey="Id_A_Liquidar" Type="SOLICITUDES" />
+      <Association Name="CLIENTES_CREDITOS" Member="CLIENTES" ThisKey="Id_Cliente" OtherKey="Id" Type="CLIENTES" IsForeignKey="true" />
+      <Association Name="SOLICITUDES_CREDITOS" Member="SOLICITUDES" ThisKey="Id_Sol" OtherKey="Id" Type="SOLICITUDES" IsForeignKey="true" />
+      <Association Name="USUARIOS_CREDITOS" Member="USUARIOS" ThisKey="Login" OtherKey="Login" Type="USUARIOS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAGOS" Member="PAGOS">
+    <Type Name="PAGOS">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Credito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Sucursal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FecPago" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Monto" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="FecProxPago" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Login" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="CLIENTES_PAGOS" Member="CLIENTES" ThisKey="Id_Cliente" OtherKey="Id" Type="CLIENTES" IsForeignKey="true" />
+      <Association Name="CREDITOS_PAGOS" Member="CREDITOS" ThisKey="Id_Credito" OtherKey="Id" Type="CREDITOS" IsForeignKey="true" />
+      <Association Name="USUARIOS_PAGOS" Member="USUARIOS" ThisKey="Login" OtherKey="Login" Type="USUARIOS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SOLICITUDES" Member="SOLICITUDES">
+    <Type Name="SOLICITUDES">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FecSolicitud" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FecAutorizado" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FecDisposicion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MontoSolicitud" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="MontoAut" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PlazoSol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PlazoAut" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NumPagosSol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumPagosAut" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LiquidaAnterior" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Id_A_Liquidar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MontoLiquid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TasaRef" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="TipoAmort" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Sobretasa" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="TasaMoratoria" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Impuesto" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="TipoGarantia" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClaseGarantia" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ValorGarantia" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DescripGarantia" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IngresoCliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoPago" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Pago" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="FecCaptura" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FecUltMod" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Login" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Autorizado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LoginAut" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="SOLICITUDES_CREDITOS" Member="CREDITOS" ThisKey="Id" OtherKey="Id_Sol" Type="CREDITOS" />
+      <Association Name="CATPLAZOS_SOLICITUDES" Member="CATPLAZOS" ThisKey="PlazoAut" OtherKey="Id" Type="CATPLAZOS" IsForeignKey="true" />
+      <Association Name="CATPLAZOS_SOLICITUDES1" Member="CATPLAZOS1" ThisKey="PlazoSol" OtherKey="Id" Type="CATPLAZOS" IsForeignKey="true" />
+      <Association Name="CATTIPOPAGOS_SOLICITUDES" Member="CATTIPOPAGOS" ThisKey="TipoPago" OtherKey="Id" Type="CATTIPOPAGOS" IsForeignKey="true" />
+      <Association Name="CLIENTES_SOLICITUDES" Member="CLIENTES" ThisKey="Id_Cliente" OtherKey="Id" Type="CLIENTES" IsForeignKey="true" />
+      <Association Name="CREDITOS_SOLICITUDES" Member="CREDITOS1" ThisKey="Id_A_Liquidar" OtherKey="Id" Type="CREDITOS" IsForeignKey="true" />
+      <Association Name="USUARIOS_SOLICITUDES" Member="USUARIOS" ThisKey="Login" OtherKey="Login" Type="USUARIOS" IsForeignKey="true" />
+      <Association Name="USUARIOS_SOLICITUDES1" Member="USUARIOS1" ThisKey="LoginAut" OtherKey="Login" Type="USUARIOS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.USUARIOS" Member="USUARIOS">
+    <Type Name="USUARIOS">
+      <Column Name="Login" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Pass" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Sucursal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="USUARIOS_CATTIPOCLIENTES" Member="CATTIPOCLIENTES" ThisKey="Login" OtherKey="Login" Type="CATTIPOCLIENTES" />
+      <Association Name="USUARIOS_CATSUCURSALES" Member="CATSUCURSALES" ThisKey="Login" OtherKey="Login" Type="CATSUCURSALES" />
+      <Association Name="USUARIOS_CATTIPOPAGOS" Member="CATTIPOPAGOS" ThisKey="Login" OtherKey="Login" Type="CATTIPOPAGOS" />
+      <Association Name="USUARIOS_CATTIPOUSUARIOS" Member="CATTIPOUSUARIOS" ThisKey="Login" OtherKey="Login" Type="CATTIPOUSUARIOS" />
+      <Association Name="USUARIOS_CLIENTES" Member="CLIENTES" ThisKey="Login" OtherKey="Login" Type="CLIENTES" />
+      <Association Name="USUARIOS_CREDITOS" Member="CREDITOS" ThisKey="Login" OtherKey="Login" Type="CREDITOS" />
+      <Association Name="USUARIOS_PAGOS" Member="PAGOS" ThisKey="Login" OtherKey="Login" Type="PAGOS" />
+      <Association Name="USUARIOS_SOLICITUDES" Member="SOLICITUDES" ThisKey="Login" OtherKey="Login" Type="SOLICITUDES" />
+      <Association Name="USUARIOS_SOLICITUDES1" Member="SOLICITUDES1" ThisKey="Login" OtherKey="LoginAut" Type="SOLICITUDES" />
+      <Association Name="CATSUCURSALES_USUARIOS" Member="CATSUCURSALES1" ThisKey="Sucursal" OtherKey="Id" Type="CATSUCURSALES" IsForeignKey="true" />
+      <Association Name="CATTIPOUSUARIOS_USUARIOS" Member="CATTIPOUSUARIOS1" ThisKey="Tipo" OtherKey="id" Type="CATTIPOUSUARIOS" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

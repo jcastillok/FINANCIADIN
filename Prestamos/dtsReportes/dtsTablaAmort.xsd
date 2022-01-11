@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsTablaAmort" targetNamespace="http://tempuri.org/dtsTablaAmort.xsd" xmlns:mstns="http://tempuri.org/dtsTablaAmort.xsd" xmlns="http://tempuri.org/dtsTablaAmort.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsTablaAmort" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsTablaAmort" msprop:Generator_UserDSName="dtsTablaAmort">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TABLADEAMORTIZACION" msprop:Generator_TableClassName="TABLADEAMORTIZACIONDataTable" msprop:Generator_TableVarName="tableTABLADEAMORTIZACION" msprop:Generator_TablePropName="TABLADEAMORTIZACION" msprop:Generator_RowDeletingName="TABLADEAMORTIZACIONRowDeleting" msprop:Generator_RowChangingName="TABLADEAMORTIZACIONRowChanging" msprop:Generator_RowEvHandlerName="TABLADEAMORTIZACIONRowChangeEventHandler" msprop:Generator_RowDeletedName="TABLADEAMORTIZACIONRowDeleted" msprop:Generator_UserTableName="TABLADEAMORTIZACION" msprop:Generator_RowChangedName="TABLADEAMORTIZACIONRowChanged" msprop:Generator_RowEvArgName="TABLADEAMORTIZACIONRowChangeEvent" msprop:Generator_RowClassName="TABLADEAMORTIZACIONRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="numPago" msprop:Generator_ColumnVarNameInTable="columnnumPago" msprop:Generator_ColumnPropNameInRow="numPago" msprop:Generator_ColumnPropNameInTable="numPagoColumn" msprop:Generator_UserColumnName="numPago" type="xs:int" minOccurs="0" />
+              <xs:element name="fechaPago" msprop:Generator_ColumnVarNameInTable="columnfechaPago" msprop:Generator_ColumnPropNameInRow="fechaPago" msprop:Generator_ColumnPropNameInTable="fechaPagoColumn" msprop:Generator_UserColumnName="fechaPago" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="totalPago" msprop:Generator_ColumnVarNameInTable="columntotalPago" msprop:Generator_ColumnPropNameInRow="totalPago" msprop:Generator_ColumnPropNameInTable="totalPagoColumn" msprop:Generator_UserColumnName="totalPago" type="xs:double" minOccurs="0" />
+              <xs:element name="pagoCapital" msprop:Generator_ColumnVarNameInTable="columnpagoCapital" msprop:Generator_ColumnPropNameInRow="pagoCapital" msprop:Generator_ColumnPropNameInTable="pagoCapitalColumn" msprop:Generator_UserColumnName="pagoCapital" type="xs:double" minOccurs="0" />
+              <xs:element name="pagoInteres" msprop:Generator_ColumnVarNameInTable="columnpagoInteres" msprop:Generator_ColumnPropNameInRow="pagoInteres" msprop:Generator_ColumnPropNameInTable="pagoInteresColumn" msprop:Generator_UserColumnName="pagoInteres" type="xs:double" minOccurs="0" />
+              <xs:element name="pagoIva" msprop:Generator_ColumnVarNameInTable="columnpagoIva" msprop:Generator_ColumnPropNameInRow="pagoIva" msprop:Generator_ColumnPropNameInTable="pagoIvaColumn" msprop:Generator_UserColumnName="pagoIva" type="xs:double" minOccurs="0" />
+              <xs:element name="saldo" msprop:Generator_ColumnVarNameInTable="columnsaldo" msprop:Generator_ColumnPropNameInRow="saldo" msprop:Generator_ColumnPropNameInTable="saldoColumn" msprop:Generator_UserColumnName="saldo" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
